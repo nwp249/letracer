@@ -4,4 +4,4 @@ main : main.o
 main.o : main.cc
 
 clean : 
-	rm main main.o
+	rm main main.o image.ppm
