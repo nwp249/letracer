@@ -12,7 +12,8 @@ class triangle {
 			vec3 ac = t.c() - t.a();
 			return unit_vector(cross(ab, ac));
 		}
-
+		
+	// yeah you probably dont need to change any of this after creating the triangle
 	private:
 		point3 ta;
 		point3 tb;
