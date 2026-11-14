@@ -1,4 +1,4 @@
-class triangle {
+class triangle : public hittable{
 	public:
 		triangle(const point3& a, const point3& b, const point3& c) : ta(a), tb(b), tc(c) 
 			{ normal = compute_normal(*this); }
@@ -11,6 +11,12 @@ class triangle {
 			vec3 ab = t.b() - t.a();
 			vec3 ac = t.c() - t.a();
 			return unit_vector(cross(ab, ac));
+		}
+
+		// Barycentric coordinate hit checking
+		bool hit(const ray& r, double ray_tmin, double ray_tmax, hit_record& rec) const override {
+			//todo
+			return true;
 		}
 
 	private:
