@@ -12,13 +12,14 @@ class triangle : public hittable{
 			vec3 ac = t.c() - t.a();
 			return unit_vector(cross(ab, ac));
 		}
-
+		
 		// Barycentric coordinate hit checking
 		bool hit(const ray& r, double ray_tmin, double ray_tmax, hit_record& rec) const override {
 			//todo
 			return true;
 		}
 
+	// yeah you probably dont need to change any of this after creating the triangle
 	private:
 		point3 ta;
 		point3 tb;
